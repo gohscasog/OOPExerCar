@@ -21,6 +21,23 @@ public class Car
         this.year = year;
         ipva = (LocalDate.now().getYear() - year) > 20;
     }
+    Car(String make, String model, Color color, int year, String id, double msrp)
+    {
+        this(model, color, year);
+        this.make = make;
+        this.id = id;
+        this.msrp = msrp;
+    }
+
+    public String toString()
+    {
+        return String.format("%s %s %s", year, make, model);
+    }
+    void Park(){}
+    void Reverse(){}
+    void Neutral(){}
+    void Drive(){}
+    void Honk(){}
 
     String make;
     String model;
@@ -29,9 +46,4 @@ public class Car
     int year;
     double msrp;
     boolean ipva;
-
-    void Park(){};
-    void Reverse(){};
-    void Neutral(){};
-    void Drive(){};
 }
