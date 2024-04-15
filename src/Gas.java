@@ -2,13 +2,14 @@ package src;
 
 public class Gas extends Car
 {
-    Gas(String model, Color color, int year)
+    Gas(String model, int year, Color color)
     {
-        super(model, color, year);
+        super(model, year, color);
+        this.fuel = Fuel.Gasoline;
     }
-    Gas(String make, String model, Color color, int year, String id, double msrp)
+    Gas(String make, String model, int year, Color color, String id, double msrp)
     {
-        super(make, model, color, year, id, msrp);
+        super(make, model, year, color, id, msrp);
     }
 
     @Override void Drive(){System.out.println("*vrum*");}

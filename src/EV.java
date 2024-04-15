@@ -2,14 +2,14 @@ package src;
 
 public class EV extends Car
 {
-    EV(String model, Color color, int year)
+    EV(String model, int year, Color color)
     {
-        super(model, color, year);
+        super(model, year, color);
+        this.fuel = Fuel.Electric;
     }
-
-    EV(String make, String model, Color color, int year, String id, double msrp)
+    EV(String make, String model, int year, Color color, String id, double msrp)
     {
-        super(make, model, color, year, id, msrp);
+        super(make, model, year, color, id, msrp);
     }
 
     @Override void Drive(){System.out.println("*zzzz*");}
